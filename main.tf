@@ -5,7 +5,6 @@
 resource "aws_launch_template" "template" { 
   instance_type =  var.instance_type
   image_id = "ami-0ab0629dba5ae551d"
-  key_name = aws_key_pair.demo_key.key_name
 
    tags = { 
     Name = var.env

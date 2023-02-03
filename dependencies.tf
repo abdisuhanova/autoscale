@@ -1,9 +1,4 @@
 
-//RSA KEY
-resource "aws_key_pair" "demo_key" { 
-  key_name = "demo_key" 
-  public_key = file("~/.ssh/id_rsa.pub") 
-} 
 
 //LISTENER
 resource "aws_lb_listener" "front_end" {
