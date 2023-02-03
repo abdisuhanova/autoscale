@@ -17,9 +17,6 @@ resource "aws_launch_template" "template" {
  
   user_data = base64encode("#!/bin/bash \nsudo su \napt install apache2 -y \nsystemctl start apache2 -y \nsystemctl enable apache2 -y \necho \"Hello, World!\" > /var/www/html/index.html")
 
-  depends_on = [
-    aws_key_pair.demo_key
-  ]
 }
 
 
